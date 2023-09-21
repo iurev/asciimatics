@@ -27,6 +27,11 @@ jobs:
       shell: cmd
       run: |
         coverage run --source=asciimatics -m unittest
+    - name: Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: coverage.sqlite3
+        path: .coverage
     - name: Upload to coveralls
       uses: iurev/coveralls-github-action@v2
       with:
