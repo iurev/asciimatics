@@ -26,7 +26,7 @@ jobs:
       run: |
         coverage run --source=asciimatics -m unittest
     - name: Upload to coveralls
-      uses: coverallsapp/github-action@v2
+      uses: iurev/coveralls-github-action@v2
       with:
         flag-name: run-${{ join(matrix.*, '-') }}
         parallel: true
@@ -36,6 +36,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Coveralls finished
-      uses: coverallsapp/github-action@v2
+      uses: iurev/coveralls-github-action@v2
       with:
         parallel-finished: true
