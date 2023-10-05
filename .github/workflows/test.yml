@@ -33,7 +33,7 @@ jobs:
         name: coverage.sqlite3
         path: .coverage
     - name: Upload to coveralls
-      uses: iurev/coveralls-github-action@954ea2d90d0747f8abb9b3571412c2098cbd5950
+      uses: iurev/coveralls-github-action@sr-64-github-action-coverage-reporter-crashing-on-windows
       with:
         flag-name: run-${{ join(matrix.*, '-') }}
         parallel: true
